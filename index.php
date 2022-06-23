@@ -36,7 +36,11 @@
                 if (file_exists($file)) {
                     echo '<div class="alert alert-success" role="alert">';
                     // echo '<h4 class="alert-heading">Well done!</h4>';
-                    echo '<p>' .  readfile($file) . '</p>';
+                    //readfile($file);
+                    $file = new SplFileObject("file.txt");
+                        while (!$file->eof()) {
+                        echo '<p>' . $file->fgets() . '</p>'
+                    }
                     echo '<hr>';
                     echo '<p class="mb-0">This means that the app was able to successfully read the config file.</p>';
                     echo '</div>';
