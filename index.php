@@ -32,12 +32,12 @@
                 <p>Configuration File:</p>
                 <p>
 			<?php
-				$file = '/etc/myapp/test.conf';
+				$configfile = '/etc/myapp/test.conf';
                 if (file_exists($file)) {
                     echo '<div class="alert alert-success" role="alert">';
                     // echo '<h4 class="alert-heading">Well done!</h4>';
                     //readfile($file);
-                    $file = new SplFileObject("file.txt");
+                    $file = new SplFileObject($configfile);
                         while (!$file->eof()) {
                         echo '<p>' . $file->fgets() . '</p>';
                     }
