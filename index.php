@@ -33,7 +33,7 @@
                 <p>
 			<?php
 				$configfile = '/etc/myapp/test.conf';
-                if (file_exists($file)) {
+                if (file_exists($configfile)) {
                     echo '<div class="alert alert-success" role="alert">';
                     // echo '<h4 class="alert-heading">Well done!</h4>';
                     //readfile($file);
