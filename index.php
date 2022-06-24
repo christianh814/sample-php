@@ -37,7 +37,6 @@
                     echo '<div class="alert alert-success" role="alert">';
                     //readfile($file);
                     $file = new SplFileObject($configfile);
-                    $file->setFlags(SplFileObject::DROP_NEW_LINE);
                         while (!$file->eof()) {
                         $file->fgets();
                     }
