@@ -38,7 +38,7 @@
                     //readfile($file);
                     $file = new SplFileObject($configfile);
                         while (!$file->eof()) {
-                        $file->fgets();
+                        echo $file->fgets();
                     }
                     echo '<hr>';
                     echo '<p class="mb-0">This means that the app was able to successfully read the config file.</p>';
