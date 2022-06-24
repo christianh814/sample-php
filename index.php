@@ -35,11 +35,7 @@
 				$configfile = '/etc/myapp/test.conf';
                 if (file_exists($configfile)) {
                     echo '<div class="alert alert-success" role="alert">';
-                    //readfile($file);
-                    $file = new SplFileObject($configfile);
-                        while (!$file->eof()) {
-                            echo '<span>' . $file->fgets() . '</span>';
-                    }
+                    echo file_get_contents($configfile);
                     echo '<hr>';
                     echo '<p class="mb-0">This means that the app was able to successfully read the config file.</p>';
                     echo '</div>';
